@@ -27,16 +27,25 @@ public class Nash_3_JavaFXIntro extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Drawing Operations Test");
     Group root = new Group();
-    Canvas canvas = new Canvas(300, 250);
+    Canvas canvas = new Canvas(1000, 1000);
     GraphicsContext gc = canvas.getGraphicsContext2D();
-    drawShapes(gc);
+    //drawShapes(gc);
     drawSomeCircle(gc,25,66,43);
     drawLotsOfCircles(gc, 50);
-    writeWordIsaiahNashIsTheBest(gc);
+    //writeWordIsaiahNashIsTheBest(gc);
     drawRectangle(gc,225,166,423);
     drawPolygon(gc, 324,432,544);
-    drawSquare(gc,1,123,145);
     drawLotsOfOvals(gc,45);
+    drawTriangleLeftandRight(gc);
+    drawTriangleBottom(gc);
+    drawTriangle(gc);
+    drawTriangleUp(gc);
+    drawTriangleTop(gc);
+    drawTriangleLeft(gc);
+    drawTriangleLe(gc);
+    drawTriangleRe(gc);
+    //writeMethodMadness(gc);
+    //drawSquareThugga(gc, 110, 60, 92);
     root.getChildren().add(canvas);
     primaryStage.setScene(new Scene(root));
     primaryStage.show();
@@ -56,7 +65,7 @@ public class Nash_3_JavaFXIntro extends Application {
       }
        
           private void writeWordIsaiahNashIsTheBest(GraphicsContext gc) {
-          gc.fillText("IsaiahNashIsTheBest", 150, 50); {
+          gc.fillText("IsaiahNashIsTheBest", 150, 1150); {
        }
           }
           private void drawRectangle(GraphicsContext gc, int x, int y, int d) {
@@ -79,10 +88,55 @@ public class Nash_3_JavaFXIntro extends Application {
           for(int i = 0; i < num; i++) {
               drawSomeCircle(gc, 50*i, (35*i), 25);
           }
-                 } 
+             }
+        private void drawTriangleLeftandRight(GraphicsContext gc)  {
+                     gc.strokeRect(0,750,1000,100);
+                     gc.setStroke(Color.DARKSLATEGREY);
+                     gc.setFill(Color.HONEYDEW);
+                 }
+        private void drawTriangleBottom(GraphicsContext gc)   {
+                      gc.setFill(Color.BLACK);
+                      gc.fillPolygon(new double[]{0,500,1000},new double[]{1000,650,1000}, 3);
+                 }
+        private void drawTriangle(GraphicsContext gc)     {
+                      gc.setFill(Color.DARKBLUE);
+                      gc.fillPolygon(new double[]{150,500,1000},new double[]{1000,650,1000}, 3);
+                  }
+        private void drawTriangleUp(GraphicsContext gc)    {
+            gc.setFill(Color.BLACK);
+            gc.fillPolygon(new double[]{0,500,1000},new double[]{300,650,300}, 3);
+        }
+        private void drawTriangleTop(GraphicsContext gc) {
+            gc.setFill(Color.AQUA);
+            gc.fillPolygon(new double[]{110,500,1000},new double[]{300,650,300}, 3);
+        
+        }
+          
+             private void drawTriangleLeft(GraphicsContext gc) {
+              gc.setFill(Color.BLACK);
+              gc.fillPolygon(new double[]{500,1000,1000},new double[]{650,1000,300}, 3);  
+            }
+             private void drawTriangleLe(GraphicsContext gc)   {
+                 gc.setFill(Color.BLUEVIOLET);
+              gc.fillPolygon(new double[]{500,1000,1000},new double[]{650,1000,350}, 3);
+                 
+             }
+             private void drawTriangleRe(GraphicsContext gc)   {
+                 gc.setFill(Color.PALEGREEN);
+              gc.fillPolygon(new double[]{0,500,0},new double[]{1000,650,300}, 3);
+                 
+             }
+             private void writeMethodMadness(GraphicsContext gc)  {
+                 gc.fillText("MethodMadness", 150, 150);
+                 
+             }
+       
+           
+            
+       
 
         
-    
+            
 
     /**
      * @param args the command line arguments
