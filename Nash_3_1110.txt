@@ -1,3 +1,0 @@
-You can Track The challenges by Creating the variables needed to pass it to 
-the respected areas. You can create the "HP" Variable to solve and track
-things. Set a counter then (HP--) to subtract one every time I believe.
